@@ -7,6 +7,7 @@ from unittest.mock import patch
 import numpy as np
 import pandas as pd
 import pytest
+
 from vol_toolkit.correlation import detect_correlation_regime, rolling_correlation
 
 

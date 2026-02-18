@@ -7,6 +7,7 @@ import math
 import numpy as np
 import pandas as pd
 import pytest
+
 from vol_toolkit.realized_vol import (
     calculate_parkinson_vol,
     calculate_realized_vol,

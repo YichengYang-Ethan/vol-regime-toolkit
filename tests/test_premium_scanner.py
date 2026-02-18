@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 import numpy as np
 import pandas as pd
+
 from vol_toolkit.premium_scanner import scan_vol_premium
 
 
