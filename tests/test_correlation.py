@@ -32,7 +32,7 @@ def _make_correlated_prices(
 
     # Convert to prices
     prices = 100 * np.exp(np.cumsum(correlated * 0.01, axis=0))
-    dates = pd.bdate_range(end="2026-02-15", periods=n)
+    dates = pd.date_range(end="2026-02-15", periods=prices.shape[0], freq="B")
 
     # Build MultiIndex columns like yfinance multi-ticker download
     cols = pd.MultiIndex.from_product([["Close"], tickers])
