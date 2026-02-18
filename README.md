@@ -1,5 +1,7 @@
 # Vol Regime Trading Toolkit
 
+[![CI](https://github.com/YichengYang-Ethan/vol-regime-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/YichengYang-Ethan/vol-regime-toolkit/actions/workflows/ci.yml)
+
 Volatility regime analysis for systematic options selling decisions.
 
 ## Why
