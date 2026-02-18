@@ -17,7 +17,7 @@ def _make_mock_prices(n: int = 300, sigma: float = 0.20, seed: int = 42) -> pd.D
     dt = 1 / 252
     log_ret = (0.0 - 0.5 * sigma**2) * dt + sigma * math.sqrt(dt) * rng.standard_normal(n)
     close = 100 * np.exp(np.cumsum(log_ret))
-    dates = pd.date_range(end="2026-02-15", periods=len(close), freq="B")
+    dates = pd.bdate_range(start="2025-01-01", periods=len(close))
     return pd.DataFrame({"Close": close}, index=dates)
 
 
