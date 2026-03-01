@@ -1,19 +1,16 @@
 # Vol Regime Trading Toolkit
 
 [![CI](https://github.com/YichengYang-Ethan/vol-regime-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/YichengYang-Ethan/vol-regime-toolkit/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Volatility regime analysis for systematic options selling decisions.
+
+**Features**: IV percentile tracking · realized vol (close-to-close + Parkinson) · GARCH(1,1) forecasting · vol risk premium scanner · correlation regime monitor
 
 ## Why
 
 Options sellers profit from theta decay, but timing matters. This toolkit identifies optimal selling windows by analyzing volatility regimes, implied vs realized vol spreads, and correlation breakdowns across your portfolio.
-
-## Features
-
-- **IV Percentile Tracking** - Know when implied volatility is historically high (good for selling) or low (wait)
-- **Realized Volatility** - Close-to-close and Parkinson estimators with GARCH(1,1) forecasting
-- **Vol Risk Premium Scanner** - Find tickers where IV exceeds realized vol (positive selling edge)
-- **Correlation Regime Monitor** - Detect when leveraged ETF correlations spike (diversification breakdown)
 
 ## Quick Start
 
@@ -27,7 +24,6 @@ pip install -e ".[dev]"
 vol-toolkit scan TQQQ SOXL AAPL NVDA
 ```
 
-Example output:
 ```
 Scanning 4 tickers for vol premium...
 
@@ -39,22 +35,12 @@ NVDA      35.2%   31.8%    +3.4%   62.0  55.3  NEUTRAL
 AAPL      18.5%   17.1%    +1.4%   54.1  42.8  NEUTRAL
 ```
 
-### IV analysis for a single ticker
+### Other commands
 
 ```bash
-vol-toolkit iv TQQQ
-```
-
-### GARCH volatility forecast
-
-```bash
-vol-toolkit forecast TQQQ
-```
-
-### Correlation regime check
-
-```bash
-vol-toolkit corr TQQQ SOXL SPY QQQ
+vol-toolkit iv TQQQ          # IV analysis for a single ticker
+vol-toolkit forecast TQQQ    # GARCH volatility forecast
+vol-toolkit corr TQQQ SOXL SPY QQQ  # Correlation regime check
 ```
 
 ## Development
